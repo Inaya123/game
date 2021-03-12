@@ -1,0 +1,112 @@
+if (gameState === 1) {
+    background("yellow");
+    beach1.visible = true;
+    beach2.visible = true;
+    beach3.visible = true;
+    beach1Disabled = false;
+    beach2Disabled = false;
+    beach3Disabled = false;
+
+    //text for goa
+    textSize(30);
+    fill("blue");
+    text("Goa -", 400, 80);
+    textSize(20);
+    text(
+      " Goa is a state in western India with coastlines stretching ",
+      480,
+      80
+    );
+    text(" along the Arabian Sea. Click on the picture to know more", 480, 110);
+
+    //text for lakshadeep
+    textSize(30);
+    fill("blue");
+    text("Lakshadeep - ", 400, 390);
+    textSize(20);
+    text(
+      " Lakshadweep is a tropical archipelago of 36 atolls and coral  ",
+      590,
+      390
+    );
+    text(
+      " reefs in the Laccadive Sea, off the coast of Kerala, India. ",
+      590,
+      420
+    );
+    text("Click on the picture to know more", 595, 450);
+
+    //text for maldives
+    textSize(30);
+    fill("blue");
+    text("Maldives - ", 400, 640);
+    textSize(20);
+    text(
+      " Maldives, officially the Republic of Maldives, is a small ",
+      540,
+      640
+    );
+    text(
+      " archipelagic state in South Asia, situated in the Arabian Sea  ",
+      540,
+      670
+    );
+    text("of the Indian Ocean.Click on the picture to know more", 545, 700);
+
+    if (mousePressedOver(beach1) && !beach1Disabled) {
+      gameState = 4;
+    }
+    if (mousePressedOver(beach2) && !beach2Disabled) {
+      gameState = 5;
+    }
+    if (mousePressedOver(beach3) && !beach3Disabled) {
+      gameState = 6;
+    }
+  }
+  if (gameState === 4) {
+    beach1.visible = false;
+    beach2.visible = false;
+    beach3.visible = false;
+    goaFunction();
+  }
+  if (gameState === 5) {
+    beach1.visible = false;
+    beach2.visible = false;
+    beach3.visible = false;
+    lakshadeepFunction();
+  }
+  if (gameState === 6) {
+    beach1.visible = false;
+    beach2.visible = false;
+    beach3.visible = false;
+    maldivesFunction();
+  }
+
+  drawSprites();
+}
+
+//calling goa
+function goaFunction() {
+  background("pink");
+
+  beach1.visible = false;
+  beach2.visible = false;
+  beach3.visible = false;
+}
+
+//calling lakshadeep
+function lakshadeepFunction() {
+  background("pink");
+
+  beach1.visible = false;
+  beach2.visible = false;
+  beach3.visible = false;
+}
+//calling maldives
+function maldivesFunction() {
+  background("pink");
+
+  beach1.visible = false;
+  beach2.visible = false;
+  beach3.visible = false;
+}
